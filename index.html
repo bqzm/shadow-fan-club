@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Shadow Shadowson
+        </title>
+    </head>
+    <link rel = "shortcut icon" type = "image/png" href = "favicon.png">
+    <body>
+        <main>
+            <h1>
+                Shadow Fan Club
+            </h1>
+            <button id = "Button" onclick = "doSomething()" style = "background-color: gray; color: black; border-radius: 5px;">
+                KILL SHADOW <- press me
+            </button>
+            <p id = "KillShadow">
+                WELCOME USER!!!
+            </p>
+            <script>
+                function doSomething(){
+                    if(document.getElementById("Button").innerHTML.match("Revive Her")){
+                        document.getElementById("Button").innerHTML = "Find Shadows Bestie"
+                        let Shadow = document.getElementById("shadowpic")
+                        Shadow.src = "./alive_shadow2.jpg"
+                        document.getElementById("KillShadow").innerHTML = "OMG SHES ALIVE!!";
+                    }
+                    else if(document.getElementById("Button").innerHTML.match("Find Shadows Bestie")){
+                        document.getElementById("Button").innerHTML = "sapphire."
+                        let Shadow = document.getElementById("shadowpic")
+                        Shadow.src = "./smokey_1.jpg"
+                        document.getElementById("KillShadow").innerHTML = "SMOKEY?!?!!?!";
+                    }
+                    else if(document.getElementById("Button").innerHTML.match("sapphire.")){
+                        document.getElementById("Button").innerHTML = "DONE"
+                        let Shadow = document.getElementById("shadowpic")
+                        Shadow.src = "./grass_eater.png"
+                        document.getElementById("KillShadow").innerHTML = "nom nom nom grass 🌾";
+                    }
+                    else if(document.getElementById("Button").innerHTML.match("DONE")){
+                        return
+                    }
+                    else{
+                        document.getElementById("KillShadow").innerHTML = "I KNOW U DIDNT JUST DO THAT...";
+                        let Shadow = document.getElementById("shadowpic")
+                        Shadow.src = "./dead_shadow_4.jpg"
+                        setTimeout(() => { document.getElementById("KillShadow").innerHTML = "SHES DEAD NOW :("; }, 2000);
+                        setTimeout(() => { document.getElementById("KillShadow").innerHTML = "R.I.P Shadow 🪦"; }, 3000);
+                        setTimeout(() => { document.getElementById("Button").innerHTML = "Revive Her" }, 4000);
+                    }
+                }
+            </script>
+            <img id = "shadowpic" class = "img-shadow" src = "alive_shadow_real.png" alt = "Shadow Fan Club" width: 30px;>
+        </main>
+    </body>
+</html>
